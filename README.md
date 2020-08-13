@@ -13,3 +13,6 @@ To use this project, clone this repository and move into the directory that you 
 \- 8/13/2020 11:48am -
 Just finished chapter one and am looking to see more of the language (not looking to write a project right now). I am going to skip on to chapter three before I get my hands dirty. So far, I really like the built in documentation and book as well as their package management system/build system and direct level rustc compiler. It is greatly convienent and refreshing for some one who has struggle with ruby gems and the ruby development toolchain in the past on my Windows machine to see something so plug and play.
 
+\- 8/13/2020 1:13pm
+Just finished chapter 3 and theres a lot of cool functionality I like about this language. The fluid implementation of expression evalutions is quite nice and I enjoy the function header format as well as data type default immutability and assigments. if let is nice and the loops look solid, something that I really enjoy in python in a much faster language. Moving back to chapter 2 to do the project next and then doing the mini-projects at the end of chapter 3.
+
