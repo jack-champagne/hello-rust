@@ -22,3 +22,7 @@ Just finished chapter 3 and theres a lot of cool functionality I like about this
 
 It is after my lunch break and I have just finished chapter 2. Was a good chapter that allowed me to utilize some concepts and knowledge from chpt 1 and 3. The program written was quite simple but I loved the structure of error catching and the match keyword. Also, cargo and its ability for crate managment is so powerful, I enjoy something that controls the programming environment in such a positive way. On to chapter 4.
 
+\- 9/5/2020 2:06pm -
+
+It is during Cody's wedding in Alabama and I am doing a little bit of programming and homework before I have to start getting anything ready for the ceremony tonight. Slices are cool, though they did take a while for me to get through. I have not worked with this sort of concept before but really like to see how it avoids common bugs through clever language specifications. It is also extremely powerful. I have now finished chapter 4 and the next chapter will be about structs. This chapter was something that is deeply important to how rust function as a language and I found it quite impressive. I really like how it combines the best aspects of garabage-collected languages and explicit languages while eliminating the weaker aspects of both. References are something that I am going to be getting more and more comfortable with as time goes on but alas, on to chapter 5.
+
