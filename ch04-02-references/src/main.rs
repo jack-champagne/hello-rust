@@ -89,4 +89,3 @@ fn no_dangle() -> String {
     s
 }
 // Ownership is passed in this example, nothing is freed in memory.
-
