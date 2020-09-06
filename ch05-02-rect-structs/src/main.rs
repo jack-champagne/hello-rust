@@ -4,15 +4,37 @@
 // to reflect the refacorings that have taken place to use structs.
 // EDIT 1: The same program has been implemented with tuples, but width
 // and height values are unnamed, which makes it confusing!
+
+struct Rectangle {
+    width: u32,
+    height: u32
+}
+
 fn main() {
-    let rect1 = (15, 20);
+    let rect1 = Rectangle {
+        width: 15,
+        height: 20
+    };
 
     println!(
         "The area of the rectangle is {} square pixels!",
-        area(rect1)
+        area(&rect1)
     );
+
+    // We want the above to pass a reference to rect because we want main
+    // to retain ownership, so that this next bit of code is callable.
+    println!(
+        "The height element of rect is {}",
+        rect1.height
+    )
+
+    // What if we want to print our rectangle to stdout?
+    println!(
+        "rect1 is {}",
+        rect1
+    )
 }
 
-fn area(dimensions: (u32, u32)) -> u32 {
-    dimensions.0 * dimensions.1
+fn area(rect: &Rectangle) -> u32 {
+    rect.height * rect.width
 }
