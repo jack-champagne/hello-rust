@@ -31,7 +31,7 @@ fn main() {
 
     // What if we want to print our rectangle to stdout?
     println!(
-        "rect1 is {:?}",
+        "rect1 is {:#?}",
         rect1
     );
 }
@@ -39,3 +39,7 @@ fn main() {
 fn area(rect: &Rectangle) -> u32 {
     rect.height * rect.width
 }
+
+// The #[derive(Debug)] trait that we have added to rectangle is greatly useful
+// and can be used on any struct. More at appendix C. More about this in chp 10.
+// Now, what if we could bind this area method specifically to rect types? Next!
