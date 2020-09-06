@@ -5,6 +5,7 @@
 // EDIT 1: The same program has been implemented with tuples, but width
 // and height values are unnamed, which makes it confusing!
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32
@@ -30,7 +31,7 @@ fn main() {
 
     // What if we want to print our rectangle to stdout?
     println!(
-        "rect1 is {}",
+        "rect1 is {:?}",
         rect1
     );
 }
