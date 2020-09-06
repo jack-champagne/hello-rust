@@ -26,13 +26,13 @@ fn main() {
     println!(
         "The height element of rect is {}",
         rect1.height
-    )
+    );
 
     // What if we want to print our rectangle to stdout?
     println!(
         "rect1 is {}",
         rect1
-    )
+    );
 }
 
 fn area(rect: &Rectangle) -> u32 {
