@@ -14,6 +14,26 @@ impl Rectangle {
     fn area(&self) -> u32 {
         self.width * self.height
     }
+
+    fn can_hold(&self, rect2 : &Rectangle) -> bool {
+        self.width > rect2.width && self.height > rect2.height
+    }
+
+    // Associated functions: These functions are functions that are associated with
+    // the struct but do *not* take in self as a parameter. String::from is an example
+    // of an associated function for example.
+    // They are often used for constructors that return a new instance of the struct based on
+    // the passed in parameters.
+    // To call this function we use the :: syntax as before. This function is *namespaced* by a
+    // struct. 
+
+    fn square(edge_length : u32) -> Rectangle {
+        Rectangle {
+            width: edge_length,
+            height: edge_length,
+        }
+    }
+
 }
 
 fn main() {
@@ -21,6 +41,21 @@ fn main() {
         width: 30,
         height: 50,
     };
+
+    let rect2 = Rectangle {
+        width: 10,
+        height: 40,
+    };
+    let rect3 = Rectangle {
+        width: 60,
+        height: 45,
+    };
+
+    let sq1 = Rectangle::square(1);
+    println!("SQ1 Area!: {}", sq1.area());
+
+    println!("Can rect1 hold rect2? {}", rect1.can_hold(&rect2));
+    println!("Can rect1 hold rect3? {}", rect1.can_hold(&rect3));
 
     println!(
         "The area of the rectangle is {} square pixels.",
@@ -44,3 +79,7 @@ fn main() {
 // based on the calling context and the method signature what the user
 // is trying to do (calling method of reference/pointer or calling method of object/value)
 
+// It is also of note that multiple impl blocks are allowed for a single struct.
+// This will be useful later when generics types and traits are introduced
+
+// Next up, Rust enums! 
