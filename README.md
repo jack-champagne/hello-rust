@@ -37,3 +37,4 @@ Today was a really great day of programming for me. When I don't have any projec
 \- 11/26/2020 2:38pm
 
 Finally finished, after a lot of work, chapter 7 of the Book. It was mainly focused on how rust code is organized, maintained, and how modules, packages, and crates all work together and what they are. The chapter was pretty good at explaining many core concepts and idioms of the Rust programming language but before I move on, I think I will probably review my knowledge of what a *crate* actually is because I cannot define it myself at the moment. I enjoyed this chapter as well and like the structure and layout of rusts privacy and code organization system. This chapter is a little different from the rest because it focused a lot less on specific code syntax and was more focused on higher level organization and privacy concepts. That is why you will see there is a different structure to this chapter. Onto collections!
+
