@@ -9,7 +9,7 @@ fn main() {
     let mut s = String::new();
 
     // String literals and to_string
-    let data = "my new string"
+    let data = "my new string";
     let s = data.to_string();
 
     let s = "my newer string".to_string();
@@ -25,10 +25,13 @@ fn main() {
     let hello = String::from("नमस्ते");
     let hello = String::from("こんにちは");
     let hello = String::from("안녕하세요");
-    let hello = String::from("你好");
     let hello = String::from("Olá");
     let hello = String::from("Здравствуйте");
     let hello = String::from("Hola");
+    let hello = String::from("你好");
+
+    println!("{}", hello);
+
 
     // Just like a vector, we can add, update, and remove values from a string. We can also concatenate
     // a string using the + operator or the format! macro
@@ -43,6 +46,58 @@ fn main() {
     s1.push_str(s2);
     println!("s2 is {}", s2);
 
-    
+    // The push method appends a singular character to the string as so 
+    let mut s = String::from("Hell");
+    s.push('o');
+    assert_eq!(s, "Hello");
 
+    // Concatenation between two strings
+    let s1 = String::from("Hello,");
+    let s2 = String::from(" world.");
+    let s3 = s1 + &s2; //  s1 has been moved because of this and can no longer be used
+
+    // There is a method that gets called when we use the + operator, this seems like it is going to be a
+    // idea to the way that c++ allows for operator overloading. 
+    // Method signature:
+    // fn add(self, s: &str) -> String {}
+
+    // To be precise, the real signature is defined using generics in the std lib
+
+    // Interesting concept, deref coercion, chapter 15. This is where rust will change the &s2 into &s2[..]
+    // which is of the right type, &str, to be used by the add method.
+
+    // Note that the s param of the add method is a reference, therefor the method will not take ownership of s.
+    // More complex concatenations:
+
+    let s1 = String::from("tic");
+    let s2 = String::from("tac");
+    let s3 = String::from("toe");
+
+    let s = s1 + "-" + &s2 + "-" + &s3;
+    assert_eq!(s, "tic-tac-toe");
+
+    // Let's instead use the format macro :^)
+    // let s = format!("{}-{}-{}", s1, s2, s3); // Won't work because ownership of s1 has been taken by s on line 76.
+    let s1 = String::from("tic");   // Now it works
+    let s = format!("{}-{}-{}", &s1, &s2, &s3);
+    assert_eq!(s, "tic-tac-toe");
+    // This also does not take ownership of its parameters!
+
+    // Indexing Strings
+    // Since the String class is a wrapper over Vec<u8>, there are some interesting things that we don't and can't do
+    let hello = String::from("Hello!");
+    // let h = hello[0]  // -- This does not work! Why?
+
+    // len in the String class refers the the number of bytes a string is. hello is 6 bytes long
+    assert_eq!(hello.len(), 6);
+
+    // But what if we use some other UTF-8 characters?
+    let hello = String::from("Здравствуйте");
+    // There are 12 characters here but it takes 24 bytes to store this string!
+    assert_eq!(hello.len(), 24);
+
+    assert_ne!("З", "3");
+    // The З character (not the same as 3) takes two bytes to store in unicode.
+
+    
 }
