@@ -99,5 +99,41 @@ fn main() {
     assert_ne!("З", "3");
     // The З character (not the same as 3) takes two bytes to store in unicode.
 
-    
+    // Ths sort of code is not allowed as it will return the first byte of the string and *not* the first char
+    // This is because some characters take up more bytes in memory than others in UTF-8 encoding.
+    // let first_letter = &hello[0];
+
+    // Next section is on Bytes, Scalar Values, and Grapheme clusters
+    let hello = String::from("नमस्ते");
+    println!("{:?}", hello.as_bytes());
+    // The above line will print: [224, 164, 168, 224, 164, 174, 224, 164, 184, 224, 165, 141, 224, 164, 164, 224, 165, 135]
+
+    println!("{:?}", hello.chars());
+    // The above will give us something like: ['न', 'म', 'स', '्', 'त', 'े']
+
+    // The reasoning for all of this is mainly because accessing the index of an array should be guarenteed
+    // as an O(1) operation and this cannot be guarenteed for strings.
+
+    // Next section: Slices of strings
+    let hello = String::from("Здравствуйте");
+    let my_slice = &hello[0..4];
+
+    // let my_slice = &hello[0..1];  // This will panic at runtime
+    // We can iterate intstead!
+    let hello = String::from("नमस्ते");
+    for c in hello.chars() {
+        println!("{}", c);
+    }
+
+    for c in hello.chars() {
+        print!("{}", c);
+    }
+
+    for b in hello.bytes() {
+        println!("{}", b);
+    }
+
+    // Getting grapheme clusters is so complex in fact that the standard library does not provide functionality for it
+
+    // Next data structure, hash maps!
 }
