@@ -45,3 +45,8 @@ Chapter 8 took a lot of work. As we go further and futher into this book, I beli
 \- 3/19/2021 4:08pm
 
 Chapter 9 was about panic!, Result, and how Rust handles error. Also learned about .expect and .unwrap stuff. There was a small section on closures but we were not formally introduced to them. I also found the 'Rust by Example' book on their website and will probably be transition over to that a bit. This book gets into some details with rust and its design but I learn best by doing and I think that other book will provide that for me.
+
+\- 5/13/2021 1:36pm
+
+Chapter 10 was all about generics, traits, and references (reference lifetimes to be specific). Something that is not immediately clear in the beginning of the book as how Rust actually avoids dangling pointers and the sort. This is very clearly explained in this chapter during reference lifetimes. I am very excited for the next chapter however, as it is a skill that I need much development in. Testing!
+

@@ -1,5 +1,7 @@
 // An example of the borrow checker looking for reference lifetimes...
 
+use std::fmt::Display;
+
 fn main() {
     {
         let r;
@@ -36,6 +38,37 @@ fn main() {
 
 
     // string1 is valid until here
+
+
+    // This is where the section begins for structs
+    let novel = String::from("Call me Ismael. Some years ago...");
+    let first_sentence = novel.split('.').next().expect("Could not find a '.'");
+    let i = ImportantExcerpt {
+        part: first_sentence,
+    };
+
+    // This instance of ImportantExcerpt cannot outlive the reference inside.
+
+    // Note that not every function working with references as params and return type need these lifetime parameters,
+    // even thought every reference has them, instead some lifetime references are built into the compiler as they
+    // are so deterministic and common that the tedium removed is worth it. See the first_word function from ch04-09
+    // There are called lifetime elision rules. 
+
+    // STATIC LIFETIME Rules
+    // Lifetime meaning that the value *can* live for the entire program. For example, string literals!
+    let s: &'static str = "This has a static lifetime";
+
+    // GENERIC Type parameters, trait bound and lifetimes
+    fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str where T: Display{
+        println!("Announcment!: {}", ann);
+        if x.len() > y.len() {
+            x
+        } else {
+            y
+        }
+    }
+
+    // Note that lifetimes are a type of generic, so they belong with the other generic arguments.
 }
 
 // We must impose the constraint that all these references must have the same lifetime. We can do that by giving it
@@ -87,3 +120,19 @@ fn longest_bad<'a>(x: &'a str, y: &str) -> &'a str {
 
 // This is all to avoid dangling pointers, and ensure memory safety.
 
+
+// The next half of this ection is about structs and lifetimes so that structs can hold pointers.
+struct ImportantExcerpt<'a> {
+    part: &'a str,
+}
+
+impl<'a> ImportantExcerpt<'a> {
+    fn level(&self) -> i32 {
+        3
+    }
+
+    fn announce_and_return_part(&self, announcement: &str) -> &str {
+        println!("Attention please: {}", announcement);
+        self.part
+    }
+}
