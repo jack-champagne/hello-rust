@@ -54,3 +54,7 @@ Chapter 10 was all about generics, traits, and references (reference lifetimes t
 
 Chapter 11 was all about testing, controlling testing, and the two different types of testing (unit and integration tests). This was really good for me because testing is something that is not covered in your intro learning to a language (like my self-teaching java, python, c++, c# and the such). Testing is something that if I were to do more, I would almost certainly write better, more bug free code. I am very excited looking forward to creating a command line application with rust in the next chapter. I am sure it will bring in all the techniques from the previous chapter and more.
 
+\- 5/17/2021 1:02pm
+
+Chapter 12 was a short project with a little bit of application for all of the above chapters. There was a few things that I have seen before but won't learn about until next chapter. I tried doing a small project on my own to test my knowledge but very quickly realized how limited I was in my knowledge of basic libraries such as a http requests library and the sort. Functional language programming up next.
+
