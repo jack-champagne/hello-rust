@@ -50,3 +50,7 @@ Chapter 9 was about panic!, Result, and how Rust handles error. Also learned abo
 
 Chapter 10 was all about generics, traits, and references (reference lifetimes to be specific). Something that is not immediately clear in the beginning of the book as how Rust actually avoids dangling pointers and the sort. This is very clearly explained in this chapter during reference lifetimes. I am very excited for the next chapter however, as it is a skill that I need much development in. Testing!
 
+\- 5/13/2021 4:10pm
+
+Chapter 11 was all about testing, controlling testing, and the two different types of testing (unit and integration tests). This was really good for me because testing is something that is not covered in your intro learning to a language (like my self-teaching java, python, c++, c# and the such). Testing is something that if I were to do more, I would almost certainly write better, more bug free code. I am very excited looking forward to creating a command line application with rust in the next chapter. I am sure it will bring in all the techniques from the previous chapter and more.
+
