@@ -1,15 +1,13 @@
-# My journey into rust!
+# My journey into rust
 
 This is my first steps at taking a good look at a language that has proved to be very well-liked amoung its developers. This readme will be periodically updated to include information on what I have learned and completed and where I am headed next.
 
-
 Most of this code is taken from the rust-lang documentation book (if you have rust installed, it can be accessed at ```$ rustup docs --book```).
-
 
 To use this project, clone this repository and move into the directory that you would like to build the chapters code in. For directories without a Config.toml, use rustc to compile.
 
+## Log
 
-### Log
 \- 8/13/2020 11:48am -
 
 Just finished chapter one and am looking to see more of the language (not looking to write a project right now). I am going to skip on to chapter three before I get my hands dirty. So far, I really like the built in documentation and book as well as their package management system/build system and direct level rustc compiler. It is greatly convienent and refreshing for some one who has struggle with ruby gems and the ruby development toolchain in the past on my Windows machine to see something so plug and play.
@@ -58,3 +56,6 @@ Chapter 11 was all about testing, controlling testing, and the two different typ
 
 Chapter 12 was a short project with a little bit of application for all of the above chapters. There was a few things that I have seen before but won't learn about until next chapter. I tried doing a small project on my own to test my knowledge but very quickly realized how limited I was in my knowledge of basic libraries such as a http requests library and the sort. Functional language programming up next.
 
+\- 12/10/2021 7:00pm
+
+A few days ago, after I realized how much time learning the idiomatic functional programming aspects of ch13, I decided to let it stew for a bit  (remain unfinished) while I take a look at packages and cargo.
