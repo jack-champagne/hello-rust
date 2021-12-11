@@ -6,6 +6,10 @@ fn main() {
     let simulated_random_number = 5;
 
     generate_workout(simulated_user_specified_value, simulated_random_number);
+
+    // Cannot do the following:
+    // let my_invalid_closure = |x| x;
+
 }
 
 fn generate_workout(intensity: u32, random_number: u32) {
@@ -36,3 +40,4 @@ fn generate_workout(intensity: u32, random_number: u32) {
         }
     }
 }
+
